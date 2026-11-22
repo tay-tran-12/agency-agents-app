@@ -1,4 +1,4 @@
-//! Agency Agents — Tauri 2 backend entrypoint.
+//! CTY KIM — Tauri 2 backend entrypoint.
 //!
 //! Module layout per `memory-bank/backendApi.md` §9. This file is the
 //! Tauri Builder + invoke_handler registration; every command lives
@@ -29,15 +29,15 @@ use commands::*;
 // **Placeholder.** Replace before cutting a release. The real key is
 // generated per `BUILD.md` instructions:
 //
-//     tauri signer generate -w ~/.config/agency-agents-app/updater.key
+//     tauri signer generate -w ~/.config/cty-kim/updater.key
 //
 // The matching public key the command prints is what goes here.
 // Keep the private key chmod 600 outside the repo — it's the only
-// thing standing between a compromised agencyagents.app and a
+// thing standing between a compromised updater endpoint and a
 // malicious binary push.
 //
 // Real minisign public key. The matching private key lives at
-// `~/.config/agency-agents-app/updater.key` (chmod 600,
+// `~/.config/cty-kim/updater.key` (chmod 600,
 // outside the repo). The signature verification at install time
 // validates every downloaded `.app.tar.gz` against this pubkey; any
 // mismatch aborts the install with no on-disk side effects.

@@ -112,7 +112,7 @@ const CORPUS_TARBALL_URL: &str =
 /// Git remote used to clone/pull a managed catalog when `git` is available.
 const CATALOG_GIT_URL: &str = "https://github.com/msitarzewski/agency-agents.git";
 
-/// Dev-root directory names scanned (under `$HOME`) by the "Find Agency Agents"
+/// Dev-root directory names scanned (under `$HOME`) by the "Find CTY KIM"
 /// button when looking for an existing clone.
 const SCAN_ROOTS: [&str; 7] = [
     "Software",
@@ -1176,7 +1176,7 @@ fn candidate_for(path: &Path, kind: &str) -> Option<CatalogCandidate> {
 
 /// Detect candidate catalogs. Always checks `~/.agency-agents`; when `scan` is
 /// true also walks common dev roots for an `agency-agents` checkout (the "Find
-/// Agency Agents" button). Pure of app state — safe to call anytime.
+/// CTY KIM" button). Pure of app state — safe to call anytime.
 async fn detect_catalogs(scan: bool) -> CatalogDetection {
     let git_available = git_available().await;
     let mut candidates: Vec<CatalogCandidate> = Vec::new();
@@ -1312,7 +1312,7 @@ fn baseline_dir(app: &AppHandle) -> Result<PathBuf, AppError> {
 }
 
 /// Resolve the per-app data dir via Tauri's path resolver (honors the
-/// bundle id `com.zerologic.agency-agents-app`).
+/// bundle id `com.ctykim.agency-agents`).
 pub(crate) fn app_data_dir(app: &AppHandle) -> Result<PathBuf, AppError> {
     app.path().app_data_dir().map_err(|e| AppError::Internal {
         message: format!("resolve app_data_dir: {e}"),

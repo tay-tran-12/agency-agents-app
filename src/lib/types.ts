@@ -17,7 +17,7 @@ export type CaskIconMode = "off" | "installed-only" | "all";
 
 /**
  * Persisted user settings (Phase 12d). Lives at
- * `~/Library/Application Support/com.zerologic.agency-agents-app/settings.json` and is
+ * `~/Library/Application Support/com.ctykim.agency-agents/settings.json` and is
  * round-tripped via `settingsGet` / `settingsSet`.
  *
  * Bounds (enforced server-side, also re-checked client-side for snappier
@@ -49,7 +49,7 @@ export interface Settings {
       Retained for settings-file compatibility. */
   enhancedTrendingEnabled: boolean;
   /** Legacy vulnerability-scanning toggle inherited from the source app.
-      Agency Agents does not currently run a vulnerability scanner. */
+      CTY KIM does not currently run a vulnerability scanner. */
   vulnerabilityScanningEnabled: boolean;
   /** Legacy live-enrichment toggle inherited from the source app. Agency
       Agents currently reads metadata from the active AA catalog. */
@@ -74,7 +74,7 @@ export const SETTINGS_DEFAULTS: Settings = {
   // Phase 13 — AI-enriched rendering. ON by default so users get the
   // friendly names, summaries, and categories out of the box.
   aiFeaturesEnabled: true,
-  // Auto-check for new Agency Agents releases. Off by
+  // Auto-check for new CTY KIM releases. Off by
   // default per the "zero outbound unless user consented" posture.
   updateAutoCheck: false,
   // Legacy retained field. Off by default.
@@ -179,8 +179,8 @@ export interface CreatedIssue {
 // =========================================================
 
 /**
- * A newer Agency Agents version surfaced by the manifest at
- * `agencyagents.app/updater.json`. Held by the updater store
+ * A newer CTY KIM version surfaced by the manifest at
+ * `raw.githubusercontent.com/tay-tran-12/agency-agents-app/main/updater.json`. Held by the updater store
  * once a check returns `available`. Matches the camelCase wire shape
  * the backend's `UpdateCheckOutcome::Available` flattens onto when
  * serde-tagged with `kind`.
@@ -304,7 +304,7 @@ export function appErrorMessage(e: AppErrorPayload): string {
 }
 
 // =========================================================
-// Agency Agents — corpus subsystem (contracts.md §A)
+// CTY KIM — corpus subsystem (contracts.md §A)
 // =========================================================
 //
 // Mirrors the Rust DTOs in `src-tauri/src/types.rs`. Wire shape is

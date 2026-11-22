@@ -1,13 +1,13 @@
 [package]
-name = "agency-agents-app"
+name = "cty-kim"
 version = "0.3.2"
-description = "Agency Agents — a native macOS app store for AI agents."
-authors = ["Michael Sitarzewski"]
+description = "CTY KIM — duyệt, cài đặt và quản lý 251+ agent AI chuyên gia."
+authors = ["Charlie Kim"]
 edition = "2021"
 license = "MIT"
 
 [lib]
-name = "agency_agents_lib"
+name = "cty_kim_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

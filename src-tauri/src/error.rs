@@ -1,4 +1,4 @@
-//! Typed error model for Agency Agents.
+//! Typed error model for CTY KIM.
 //!
 //! `AppError` is the single error type returned by every Tauri command.
 //! It serializes to a tagged JSON shape (`code` discriminator) so the

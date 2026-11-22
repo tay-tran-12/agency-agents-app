@@ -1,26 +1,26 @@
-# Agency Agents
+# CTY KIM
 
 > A native installer for AI agents.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Built with Tauri 2](https://img.shields.io/badge/Built%20with-Tauri%202-orange)](https://tauri.app)
-[![macOS 13+](https://img.shields.io/badge/macOS-13%2B-lightgrey)](https://www.apple.com/macos)
-[![Sponsor](https://img.shields.io/badge/♥-Sponsor-EC4899?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/msitarzewski)
 
-Agency Agents is a small, native app for browsing, installing, and tracking the agent personas from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) across the AI coding tools you actually use.
+CTY KIM is a small, native app for browsing, installing, and tracking the agent personas from [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) across the AI coding tools you actually use.
 
 It is full source, MIT-licensed, local-first, and does not run telemetry.
 
+Based on [Agency Agents](https://github.com/msitarzewski/agency-agents-app) by Michael Sitarzewski (MIT), with a Vietnamese UI and CTY KIM branding.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="landing/screenshots/dashboard-dark.png">
-  <img alt="Agency Agents — Dashboard: install health, cross-tool coverage, and the catalog by division" src="landing/screenshots/dashboard-light.png">
+  <img alt="CTY KIM — Dashboard: install health, cross-tool coverage, and the catalog by division" src="landing/screenshots/dashboard-light.png">
 </picture>
 
 ## Why This Exists
 
 The `agency-agents` repo is a useful catalog of specialist AI agent personas, but every coding tool has its own agent format and install path. Claude Code, Codex, Cursor, Gemini CLI, Qwen, opencode, Copilot, and Osaurus all want similar content in slightly different places.
 
-Agency Agents gives that catalog a native control surface:
+CTY KIM gives that catalog a native control surface:
 
 - browse the agent catalog by division and role
 - inspect the source persona before installing it
@@ -33,7 +33,7 @@ The core idea is simple: AI tools do not share a package database, so the app ke
 
 ## Features
 
-Agency Agents is organized around four pillars — **Agents** (who), **Tools** (how), **Teams** (which), and **Projects** (where):
+CTY KIM is organized around four pillars — **Agents** (who), **Tools** (how), **Teams** (which), and **Projects** (where):
 
 - **Agents workspace** — searchable three-pane catalog, division and category filters, an install-state lens, a detail panel, and per-agent deployment controls.
 - **Tools panel** — shows all recognized tools from the registry, detected installs, counts, versions where available, default targets, project installs, and bulk operations. Installable targets render in full; recognized-only targets appear dimmed.
@@ -76,7 +76,7 @@ The upstream AA repo also contains integrations for Antigravity, Aider, Windsurf
 
 ## Install
 
-Grab the build for your platform from the [latest release](https://github.com/msitarzewski/agency-agents-app/releases/latest):
+Grab the build for your platform from the [latest release](https://github.com/tay-tran-12/agency-agents-app/releases/latest):
 
 - **macOS** (Apple Silicon & Intel) — signed + notarized `.dmg`, macOS 13+.
 - **Linux** (x86_64) — `.deb`, `.rpm`, or the portable `.AppImage`.
@@ -111,7 +111,7 @@ Prerequisites:
 Then:
 
 ```sh
-git clone https://github.com/msitarzewski/agency-agents-app
+git clone https://github.com/tay-tran-12/agency-agents-app
 cd agency-agents-app
 npm install
 npm run tauri dev
@@ -169,7 +169,7 @@ No telemetry, crash reporting, advertising pixels, or product analytics are incl
 
 ## Security
 
-Agency Agents uses typed Tauri IPC commands and avoids `tauri-plugin-shell`. File writes are restricted to known install destinations, app state, backups, and user-selected paths. Modified installed files are backed up before destructive operations.
+CTY KIM uses typed Tauri IPC commands and avoids `tauri-plugin-shell`. File writes are restricted to known install destinations, app state, backups, and user-selected paths. Modified installed files are backed up before destructive operations.
 
 Report vulnerabilities using [SECURITY.md](./SECURITY.md).
 
@@ -191,10 +191,10 @@ The highest-value areas before 1.0 are:
 
 ## Acknowledgments
 
-- [Agency Agents](https://github.com/msitarzewski/agency-agents) — the source catalog and upstream converter/install scripts. The app contributes its transforms back upstream: v0.2.0's Osaurus integration and the shared `tools.json` tool manifest (the twin of `divisions.json`) landed there first.
+- [CTY KIM](https://github.com/msitarzewski/agency-agents) — the source catalog and upstream converter/install scripts. The app contributes its transforms back upstream: v0.2.0's Osaurus integration and the shared `tools.json` tool manifest (the twin of `divisions.json`) landed there first.
 - [Tauri](https://tauri.app) — native app shell without the Electron footprint.
 - [Svelte](https://svelte.dev) — the frontend runtime.
 
 ## Support The Project
 
-If Agency Agents saves you time, consider [sponsoring on GitHub](https://github.com/sponsors/msitarzewski). Sponsorship is optional and does not unlock a paid tier.
+If CTY KIM saves you time, consider [sponsoring on GitHub](https://github.com/sponsors/msitarzewski). Sponsorship is optional and does not unlock a paid tier.

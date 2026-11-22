@@ -1,7 +1,7 @@
 //! Settings persistence (Phase 12d).
 //!
 //! Stores user-configurable preferences in
-//! `~/Library/Application Support/com.zerologic.agency-agents-app/settings.json`. Loaded once
+//! `~/Library/Application Support/com.ctykim.agency-agents/settings.json`. Loaded once
 //! at app startup into `AppState.settings` and refreshed by every
 //! `settings_set` / `settings_reset` call so live readers (e.g. the
 //! paranoid-mode gate consulted by `require_network`) see changes
@@ -115,19 +115,19 @@ pub struct Settings {
     pub skipped_update_versions: Vec<String>,
 
     /// Legacy enhanced-trending toggle inherited from the source app.
-    /// Retained for settings-file compatibility; Agency Agents should not
+    /// Retained for settings-file compatibility; CTY KIM should not
     /// wire a runtime feature to this without a fresh endpoint audit.
     #[serde(default)]
     pub enhanced_trending_enabled: bool,
 
     /// Legacy vulnerability-scanning toggle inherited from the source app.
-    /// Retained for settings-file compatibility; Agency Agents does not shell
+    /// Retained for settings-file compatibility; CTY KIM does not shell
     /// out to a vulnerability scanner.
     #[serde(default)]
     pub vulnerability_scanning_enabled: bool,
 
     /// Legacy live-enrichment toggle inherited from the source app. Retained
-    /// for settings-file compatibility; Agency Agents currently reads metadata
+    /// for settings-file compatibility; CTY KIM currently reads metadata
     /// from the active AA catalog.
     #[serde(default)]
     pub live_enrichment_enabled: bool,
@@ -449,7 +449,7 @@ pub(crate) async fn persist(
 
     // Defense in depth — ensure the parent dir exists. `AppState::build`
     // already mkdir_p'd it, but a fresh checkout of the app on a system
-    // that's never run Agency Agents could plausibly hit this otherwise.
+    // that's never run CTY KIM could plausibly hit this otherwise.
     if !app_data_dir.exists() {
         tokio::fs::create_dir_all(app_data_dir)
             .await

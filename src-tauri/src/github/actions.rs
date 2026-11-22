@@ -78,9 +78,9 @@ const HTTP_TIMEOUT: Duration = Duration::from_secs(10);
 const API_BASE: &str = "https://api.github.com";
 
 const USER_AGENT: &str = concat!(
-    "agency-agents-app/",
+    "cty-kim/",
     env!("CARGO_PKG_VERSION"),
-    " (+https://github.com/msitarzewski/agency-agents-app)"
+    " (+https://github.com/tay-tran-12/agency-agents-app)"
 );
 
 // ---------- DTOs ----------
@@ -88,7 +88,7 @@ const USER_AGENT: &str = concat!(
 /// Wire shape returned by `github_create_issue`. Only the fields the
 /// frontend actually needs — the full issue JSON is intentionally
 /// discarded (GitHub returns ~40 fields, most of which would mean
-/// nothing in the Agency Agents UI).
+/// nothing in the CTY KIM UI).
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 #[serde(rename_all = "camelCase")]
 pub struct CreatedIssue {

@@ -6,7 +6,7 @@
 use serde::{Deserialize, Serialize};
 
 // =========================================================
-// Agency Agents — corpus subsystem (contracts.md §A)
+// CTY KIM — corpus subsystem (contracts.md §A)
 // =========================================================
 //
 // Wire format mirrors `src/lib/types.ts`.
@@ -79,7 +79,7 @@ pub struct CatalogCandidate {
 pub struct CatalogDetection {
     pub git_available: bool,
     /// True when a filesystem scan of common dev roots was performed (the
-    /// "Find Agency Agents" button), vs the cheap `~/.agency-agents`-only check.
+    /// "Find CTY KIM" button), vs the cheap `~/.agency-agents`-only check.
     pub scanned: bool,
     pub candidates: Vec<CatalogCandidate>,
 }
@@ -376,7 +376,7 @@ pub struct ProjectInfo {
 mod tests {
     use super::*;
 
-    // ---------- Agency Agents: Tool id ----------
+    // ---------- CTY KIM: Tool id ----------
     //
     // `Tool` is now a `String` camelCase id sourced from the embedded JSON
     // registry (which self-tests its id set in `crate::registry`). A tool id is

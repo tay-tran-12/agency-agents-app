@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * SettingsSectionNetwork.svelte — Agency Agents
+   * SettingsSectionNetwork.svelte — CTY KIM
    *
    * Privacy controls for the app's small, well-defined network surface. Agency
    * Agents talks to exactly two places: GitHub (to fetch/clone/pull the
@@ -49,11 +49,6 @@
       {
         label: "raw.githubusercontent.com · objects.githubusercontent.com",
         desc: i18n.t("network.githubAssetsDesc"),
-        allowed: !paranoid,
-      },
-      {
-        label: "agencyagents.app",
-        desc: i18n.t("network.updaterDesc"),
         allowed: !paranoid,
       },
       {

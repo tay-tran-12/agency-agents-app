@@ -1,7 +1,7 @@
 {
-  "name": "agency-agents-app",
+  "name": "cty-kim",
   "version": "0.3.2",
-  "description": "Agency Agents — a native macOS app store for AI agents. Browse, install, and track 251+ specialized agents across every AI coding tool.",
+  "description": "CTY KIM — duyệt, cài đặt và quản lý 251+ agent AI chuyên gia trên mọi công cụ lập trình AI.",
   "type": "module",
   "author": "Michael Sitarzewski",
   "repository": "github:msitarzewski/agency-agents-app",
